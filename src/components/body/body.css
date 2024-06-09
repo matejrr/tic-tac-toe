@@ -1,0 +1,5 @@
+.body{
+  display:flex;
+  column-gap: 90px;
+  position:relative;
+}

@@ -1,0 +1,9 @@
+body{
+  display:flex;
+  justify-content: center;
+  padding-top: 80px;
+  height: 550px;
+  background-image: url('	https://cdn.pixabay.com/photo/2017/06/10/09/41/background-2389460_1280.jpg');
+  background-position-x: center;
+}
+

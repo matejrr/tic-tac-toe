@@ -1,0 +1,81 @@
+  .player-comp{
+  width: 280px;
+  display:flex;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 10px;
+  margin-left: 50px;
+
+}
+
+.players{
+  font-weight: 300;
+  line-height: 5px;
+  background-color: rgba(84, 100, 100, 0.3);
+  box-shadow: 0px 0px 24px 5px rgb(9, 6, 6) ;
+  border-radius: 15%;
+  padding: 24px;
+  font-family:monospace;
+}
+
+.player-body{
+  display: flex;
+  justify-content: center;
+  
+}
+
+.count {
+  position: relative;
+  height: 500px;
+  width: 400px;
+  margin-top: 30px;
+  margin-left: -85px;
+  line-height: 3px;
+  padding-right:180px;
+  font-family: 'Italianno', cursive;
+}
+
+.old-note {
+  height: 100%;
+  width: 200%;
+}
+
+
+.first-winner{
+  position:absolute;
+  margin-left: 23px;
+  left: 32%;
+  top:20%;
+}
+
+.first-time{
+  position:absolute;
+  margin-left: 37px;
+  left: 32%;
+  top:20%;
+}
+
+.second-winner{
+  position:absolute;
+  margin-left: 23px;
+  left: 32%;
+  top: 32%;
+}
+.second-time{
+  position:absolute;
+  margin-left: 37px;
+  left: 32%;
+  top: 32%;
+}
+.third-winner{
+  position:absolute;
+  margin-left: 23px;
+  left: 32%;
+  top: 44%; 
+}
+.third-time{
+  position:absolute;
+  margin-left: 23px;
+  left: 34%;
+  top: 44%; 
+}

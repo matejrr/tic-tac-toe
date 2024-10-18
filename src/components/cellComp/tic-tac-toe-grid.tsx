@@ -3,6 +3,34 @@ import styled, { keyframes } from "styled-components";
 import { Cell } from "../DTO/DTO";
 import { Comb } from "../table/table";
 
+interface CellCompProps {
+  player: Cell["player"];
+  line: Comb["line"] | undefined;
+  crossOut: boolean;
+}
+
+export function CellComp(props: CellCompProps) {
+  return (
+    <TicTacToeGrid className="tic-tac-toe-grid">
+      {props.crossOut === false ? (
+        <>
+          {props.player === true && <Icons.closeIcon />}
+          {props.player === false && <Icons.radioIcon />}
+        </>
+      ) : (
+        <>
+          {props.player === true && <Icons.closeIcon />}
+          {props.player === false && <Icons.radioIcon />}
+          {props.line === "parallel" && <LineThroughParal />}
+          {props.line === "perpendicular" && <LineThroughPerpend />}
+          {props.line === "diagonal-crecendo" && <LineThroughDiagCrec />}
+          {props.line === "diagonal-decrecendo" && <LineThroughDiagDec />}
+        </>
+      )}
+    </TicTacToeGrid>
+  );
+}
+
 const TicTacToeGrid = styled.div`
   display: flex;
   justify-content: center;
@@ -85,31 +113,3 @@ const LineThroughDiagCrec = styled.div`
 }
     `} 0.25s forwards;
 `;
-
-interface CellCompProps {
-  player: Cell["player"];
-  line: Comb["line"] | undefined;
-  crossOut: boolean;
-}
-
-export function CellComp(props: CellCompProps) {
-  return (
-    <TicTacToeGrid className="tic-tac-toe-grid">
-      {props.crossOut === false ? (
-        <>
-          {props.player === true && <Icons.closeIcon />}
-          {props.player === false && <Icons.radioIcon />}
-        </>
-      ) : (
-        <>
-          {props.player === true && <Icons.closeIcon />}
-          {props.player === false && <Icons.radioIcon />}
-          {props.line === "parallel" && <LineThroughParal />}
-          {props.line === "perpendicular" && <LineThroughPerpend />}
-          {props.line === "diagonal-crecendo" && <LineThroughDiagCrec />}
-          {props.line === "diagonal-decrecendo" && <LineThroughDiagDec />}
-        </>
-      )}
-    </TicTacToeGrid>
-  );
-}

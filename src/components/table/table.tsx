@@ -105,16 +105,6 @@ interface TableProps {
 
 export const winnerCount: string[] = [];
 
-// export function draw(num: number) {
-//   const sum = 0;
-//   while (sum < 9) {
-//     if (num) {
-//       sum + num;
-//     }
-//     num === 9 && winnerCount.push("draw");
-//   }
-// }
-// console.log(draw);
 
 export function Table(props: TableProps) {
   const [cells, setCells] = useState<Cell[]>(defaultCells);
@@ -165,7 +155,7 @@ export function Table(props: TableProps) {
         winnerCount.push("player B");
         handleStopGame();
         return;
-      } 
+      }
     }
 
     if (cells.every((cell) => cell.player !== undefined)) {
@@ -195,8 +185,7 @@ export function Table(props: TableProps) {
                     return jell;
                   }
                 });
-                // draw(1);
-                // console.log(draw);
+                
                 cell.player === undefined && handlePlayer();
                 setCells(modifiedCells);
                 handleTicTacToe(modifiedCells);

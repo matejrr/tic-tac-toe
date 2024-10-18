@@ -1,4 +1,4 @@
 export interface Cell {
-  id: number;
-  player: boolean | void;
+    id: number;
+    player: boolean | void;
 }
